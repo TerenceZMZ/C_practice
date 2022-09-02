@@ -76,7 +76,7 @@ int calculate(const char *calc_str)
             {
                 return ERRO;
             }
-            char *temp = calloc(sizeof(char), (rightb-leftb));
+            char *temp = calloc(rightb-leftb, sizeof(char));
             memcpy(temp, calc_str+leftb+1, rightb-leftb-1);
             temp[rightb-leftb-1]='=';
             num = calculate(temp);
